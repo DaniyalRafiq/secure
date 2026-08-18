@@ -1,0 +1,585 @@
+/* Desktop / Large Screens */
+@media (max-width: 1199px) {
+  .stat-counter-section {
+    padding: clamp(2.5rem, 5vw, 3.5rem) 0;
+  }
+
+  .main-heading>h2 {
+    font-size: 52px;
+  }
+
+  .who-we-are-content {
+    padding-right: 0px;
+  }
+
+  .main-heading.white-heading h2 {
+    font-size: 40px;
+  }
+
+  .services-item-box {
+    padding: 30px 22px;
+  }
+
+  .services-item-title {
+    font-size: 20px;
+  }
+
+  .security-build-content {
+    padding-left: 10px;
+  }
+
+  .command-center-info {
+    padding: 35px 30px;
+  }
+
+  .command-center-title {
+    font-size: 28px;
+  }
+
+  .command-stats-grid .stat-value {
+    font-size: 32px;
+  }
+
+  .ser-01-counter-box .counter-number {
+    font-size: 38px;
+  }
+
+  .step-title {
+    font-size: 16px;
+  }
+
+  .step-desc {
+    font-size: 12px;
+  }
+
+  .industry-content-body {
+    padding: 25px 20px;
+  }
+
+  .industry-title {
+    font-size: 20px;
+  }
+
+  .industry-image-thumb {
+    height: 200px;
+  }
+
+  .video-testimonial-card {
+    height: 230px;
+  }
+
+  .testimonial-text-card {
+    padding: 24px 20px;
+  }
+
+  .faq-container {
+    max-width: 820px;
+  }
+
+  .contact-form-card {
+    padding: 30px;
+  }
+
+  .contact-form-card .form-title {
+    font-size: 20px;
+  }
+
+  .pre-footer-cta .left-col {
+    padding: 50px 30px 50px 40px;
+  }
+
+  .pre-footer-cta .right-col {
+    padding: 50px 40px;
+  }
+
+  .pre-footer-cta .cta-title {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 991px) {
+  .hero-section {
+    padding: 60px 0;
+    text-align: center;
+    padding-bottom: 0;
+  }
+
+  .hero-content p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-btn-group {
+    justify-content: center;
+    margin-bottom: 40px;
+  }
+
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .counter-item-wrapper {
+    margin-bottom: clamp(1.5rem, 4vw, 2rem);
+  }
+
+  .row>[class*="col-"]:last-child .counter-item-wrapper {
+    margin-bottom: 0;
+  }
+
+  .who-we-are .row {
+    flex-direction: column;
+  }
+
+  .who-we-are-content {
+    margin-bottom: 40px;
+  }
+
+  .main-heading>h2 {
+    font-size: 40px;
+  }
+
+  .who-we-are-image-wrapper {
+    padding: 0px;
+  }
+
+  .experience-badge {
+    left: 0px;
+    bottom: 0px;
+    padding: 16px 22px;
+  }
+
+  .experience-badge .badge-number {
+    font-size: 36px;
+  }
+
+  .cctv-badge {
+    right: 0px;
+    top: 0px;
+    width: 55px;
+    height: 55px;
+  }
+
+  .cctv-badge i {
+    font-size: 26px;
+  }
+
+  .services-header-description {
+    margin-top: 20px;
+  }
+
+  .main-heading.white-heading h2 {
+    font-size: 34px;
+  }
+
+  .services-grid-row {
+    margin-top: 35px;
+  }
+
+  .services-item-box {
+    margin-bottom: 24px;
+  }
+
+  .security-build-content {
+    padding-left: 0px;
+    margin-top: 40px;
+  }
+
+  .command-center-wrapper {
+    margin-bottom: 0px;
+  }
+
+  .ser-01-header {
+    margin-bottom: 35px;
+  }
+
+  .ser-01-counter-box {
+    margin-bottom: 24px;
+  }
+
+  .process-header-content {
+    margin-bottom: 35px;
+  }
+
+  .process-step-item {
+    background-color: #f8f9fc;
+    border: 1px solid #e2e8f0;
+    padding: 30px 20px;
+    margin-bottom: 24px;
+    border-radius: 4px;
+  }
+
+  .step-number-box {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 20px;
+  }
+
+  .step-number-box span {
+    font-size: 20px;
+  }
+
+  .industries-header-wrapper {
+    margin-bottom: 35px;
+  }
+
+  .industries-grid-row {
+    margin-bottom: 20px;
+  }
+
+  .industry-item-box {
+    margin-bottom: 24px;
+    height: auto;
+  }
+
+  .industry-image-thumb {
+    height: 220px;
+  }
+
+  .testimonial-video-section {
+    padding: 60px 0;
+  }
+
+  .video-testimonial-card {
+    height: 220px;
+  }
+
+  .play-btn {
+    width: 46px;
+    height: 46px;
+    font-size: 20px;
+  }
+
+  .faq-section {
+    padding: 60px 0;
+  }
+
+  .faq-header-btn {
+    padding: 18px 20px;
+  }
+
+  .faq-question {
+    font-size: 14px;
+  }
+
+  .faq-body {
+    padding: 0 20px 20px 20px;
+  }
+
+  .contact-cta-section {
+    padding: 60px 0;
+  }
+
+  .contact-cta-content {
+    padding-right: 0px;
+    margin-bottom: 40px;
+  }
+
+  .contact-form-card {
+    padding: 30px 25px;
+  }
+
+  .pre-footer-cta .right-col {
+    justify-content: flex-start;
+    padding: 30px 40px 50px 40px;
+  }
+
+  .site-footer {
+    padding-top: 50px;
+  }
+}
+
+/* Landscape Mobile */
+@media (max-width: 767px) {
+  .counter-title {
+    letter-spacing: 0.5px;
+  }
+
+  .main-heading>h2 {
+    font-size: 40px;
+  }
+
+  .who-we-are-content .description {
+    font-size: 14px;
+  }
+
+  .who-we-are-content .feature-list li {
+    font-size: 13px;
+  }
+
+  .main-heading.white-heading h2 {
+    font-size: 28px;
+  }
+
+  .services-item-box {
+    padding: 25px 20px;
+  }
+
+  .services-item-title {
+    font-size: 18px;
+  }
+
+  .services-item-text {
+    font-size: 12px;
+  }
+
+  .command-center-info {
+    padding: 25px 20px;
+  }
+
+  .command-center-title {
+    font-size: 24px;
+  }
+
+  .command-stats-grid .stat-box {
+    padding: 22px 12px;
+  }
+
+  .command-stats-grid .stat-value {
+    font-size: 28px;
+  }
+
+  .command-stats-grid .stat-label {
+    font-size: 10px;
+  }
+
+  .ser-01-header .description {
+    font-size: 13px;
+  }
+
+  .ser-01-counter-box {
+    padding: 25px 15px;
+  }
+
+  .ser-01-counter-box .counter-number {
+    font-size: 32px;
+  }
+
+  .ser-01-counter-box .counter-label {
+    font-size: 10px;
+  }
+
+  .process-step-item {
+    padding: 25px 18px;
+  }
+
+  .step-title {
+    font-size: 17px;
+  }
+
+  .industry-title {
+    font-size: 18px;
+  }
+
+  .industry-desc {
+    font-size: 12px;
+    line-height: 18px;
+    margin-bottom: 20px;
+  }
+
+  .industry-content-body {
+    padding: 20px 18px;
+  }
+
+  .quote-text {
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  .video-testimonial-card {
+    height: 200px;
+  }
+
+  .faq-header .description {
+    font-size: 13px;
+  }
+
+  .faq-icon-box {
+    width: 28px;
+    height: 28px;
+    font-size: 16px;
+  }
+
+  .contact-cta-content .cta-desc {
+    font-size: 13px;
+    margin-bottom: 25px;
+  }
+
+  .contact-form-card .form-title {
+    font-size: 18px;
+  }
+
+  .contact-form-card .form-control,
+  .contact-form-card .form-select {
+    font-size: 12px;
+    padding: 10px 12px;
+  }
+
+  .pre-footer-cta .left-col,
+  .pre-footer-cta .right-col {
+    padding: 35px 20px;
+  }
+
+  .pre-footer-cta .cta-title {
+    font-size: 26px;
+  }
+
+  .pre-footer-cta .cta-subtitle {
+    font-size: 13px;
+  }
+
+  .pre-footer-cta .cta-btn-group {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .pre-footer-cta .btn-white-solid,
+  .pre-footer-cta .btn-outline-white {
+    text-align: center;
+    justify-content: center;
+  }
+}
+
+/* Portrait Mobile */
+@media (max-width: 575px) {
+  .stat-counter-section {
+    padding: clamp(2rem, 8vw, 2.5rem) 0;
+  }
+
+  .counter-item-wrapper {
+    margin-bottom: 1.5rem;
+  }
+
+  .main-heading>h2 {
+    font-size: 38px;
+  }
+
+  .btn-theme {
+    width: 100%;
+    padding: 12px 20px;
+  }
+
+  .experience-badge {
+    padding: 12px 16px;
+  }
+
+  .experience-badge .badge-number {
+    font-size: 30px;
+  }
+
+  .experience-badge .badge-text {
+    font-size: 9px;
+  }
+
+  .main-heading.white-heading h2 {
+    font-size: 24px;
+  }
+
+  .services-item-icon {
+    width: 42px;
+    height: 42px;
+    margin-bottom: 18px;
+  }
+
+  .services-item-icon i {
+    font-size: 18px;
+  }
+
+  .command-stats-grid .stat-box {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid #3c424e;
+  }
+
+  .command-stats-grid .stat-box:nth-child(3) {
+    border-bottom: 1px solid #3c424e;
+  }
+
+  .security-feature-item {
+    margin-bottom: 18px;
+  }
+
+  .ser-01-header .sub-title {
+    font-size: 11px;
+  }
+
+  .ser-01-counter-box .counter-number {
+    font-size: 28px;
+  }
+
+  .process-step-item {
+    padding: 20px 15px;
+    margin-bottom: 18px;
+  }
+
+  .step-number-box {
+    width: 55px;
+    height: 55px;
+    margin-bottom: 15px;
+  }
+
+  .step-number-box span {
+    font-size: 18px;
+  }
+
+  .industry-image-thumb {
+    height: 190px;
+  }
+
+  .industries-bottom-action {
+    margin-top: 0px;
+  }
+
+  .testimonial-video-section {
+    padding: 40px 0;
+  }
+
+  .video-testimonial-card {
+    height: 180px;
+  }
+
+  .play-btn {
+    width: 42px;
+    height: 42px;
+    font-size: 18px;
+  }
+
+  .faq-section {
+    padding: 40px 0;
+  }
+
+  .faq-header-btn {
+    padding: 15px;
+  }
+
+  .faq-question {
+    font-size: 13px;
+    padding-right: 12px;
+  }
+
+  .faq-body {
+    padding: 0 15px 18px 15px;
+  }
+
+  .faq-body p {
+    font-size: 12px;
+    line-height: 20px;
+  }
+
+  .contact-cta-section {
+    padding: 40px 0;
+  }
+
+  .contact-form-card {
+    padding: 20px 15px;
+  }
+
+  .cta-info-list .icon-box {
+    width: 35px;
+    height: 35px;
+    font-size: 16px;
+  }
+
+  .cta-info-list .info-text .value {
+    font-size: 13px;
+  }
+}

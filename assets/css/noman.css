@@ -1,0 +1,563 @@
+/* ==========================================
+   ABOUT PAGE — CUSTOM STYLES (about.php)
+   Built on top of style.css / responsive.css.
+   Reuses existing CSS variables, fonts and
+   color tokens — no new colors introduced.
+   ========================================== */
+
+/* ==========================================
+   PAGE BANNER (Breadcrumb Hero)
+   ========================================== */
+.page-banner-section {
+  background: #091122 url('../images/about-bg.jpg') no-repeat center center / cover;
+  padding: 190px 0 80px 0;
+  position: relative;
+  overflow: hidden;
+  color: #ffffff;
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.page-banner-section::after {
+  content: "";
+  background: linear-gradient(134.87deg, #000912 -30.56%, rgba(0, 9, 18, 0.92) 41.25%, rgba(13, 35, 92, 0.55) 100%);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  z-index: 0;
+}
+
+.breadcrumb-nav {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 18px;
+  font-family: var(--font-500);
+  font-size: 13px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  z-index: 1;
+  position: relative;
+}
+
+.breadcrumb-nav a {
+  color: #a3b1c6;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.breadcrumb-nav a:hover {
+  color: var(--secondary);
+}
+
+.breadcrumb-nav .separator {
+  color: var(--secondary);
+  font-size: 10px;
+}
+
+.breadcrumb-nav .current {
+  color: var(--secondary);
+}
+
+.page-banner-content {
+  position: relative;
+  z-index: 1;
+}
+
+.page-banner-content h1 {
+  font-size: 70px;
+  color: #ffffff;
+  line-height: 1.15;
+  letter-spacing: 0.5px;
+
+}
+
+.page-banner-content h1 span {
+  color: var(--secondary);
+}
+
+.page-banner-content p {
+  color: #a3b1c6;
+  font-family: var(--font-400);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  max-width: 620px;
+  margin-bottom: 30px;
+}
+
+.page-banner-btn-group {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 1;
+}
+
+
+/* ==========================================
+   ABOUT — WHO WE ARE (extends .who-we-are)
+   ========================================== */
+.about-who-we-are .feature-list li {
+  margin-bottom: 0;
+}
+
+/* Bottom Right ISO Badge (companion to .experience-badge) */
+.iso-cert-badge {
+  position: absolute;
+  bottom: -10px;
+  right: 30px;
+  background-color: var(--secondary);
+  color: #ffffff;
+  padding: 14px 22px;
+  text-align: center;
+  z-index: 2;
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.iso-cert-badge .badge-label {
+  display: block;
+  font-family: var(--Primary-font);
+  font-size: 20px;
+  line-height: 1;
+  margin-bottom: 4px;
+  letter-spacing: 0.5px;
+}
+
+.iso-cert-badge .badge-text {
+  display: block;
+  font-family: var(--font-600);
+  font-size: 10px;
+  line-height: 1.2;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+
+/* ==========================================
+   MISSION, VISION & VALUES
+   (cards reuse .services-item-box pattern)
+   ========================================== */
+.mvv-section {
+  background-color: #11141D;
+  position: relative;
+}
+
+.badge-items {
+  background-color: #121826;
+  border: 2px solid #161B28;
+  padding: 40px 30px;
+  height: 100%;
+  position: relative;
+  transition: all 0.3s ease;
+
+}
+
+.badge-items-border-1 {
+  border-top: 3px solid #D01C24;
+}
+
+.mvv-header {
+  margin-bottom: 50px;
+}
+
+.mvv-header .sub-title {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--secondary);
+  font-family: var(--font-700);
+  font-size: 13px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.mvv-header .sub-title::before,
+.mvv-header .sub-title::after {
+  content: "";
+  display: inline-block;
+  width: 25px;
+  height: 2px;
+  background-color: var(--secondary);
+}
+
+.mvv-header .sub-title::before {
+  margin-right: 12px;
+}
+
+.mvv-header .sub-title::after {
+  margin-left: 12px;
+}
+
+.mvv-header .main-heading.white-heading h2 span {
+  color: var(--secondary);
+}
+
+.mvv-section .services-item-box {
+  text-align: left;
+}
+
+
+/* ==========================================
+   OUR HISTORY — TIMELINE
+   ========================================== */
+.history-timeline-section {
+  background-color: #ffffff;
+  position: relative;
+}
+
+.timeline-header {
+  margin-bottom: 55px;
+}
+
+.timeline-header .sub-title {
+  display: inline-flex;
+  align-items: center;
+  color: var(--secondary);
+  font-family: var(--font-700);
+  font-size: 13px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.timeline-header .sub-title::before {
+  content: "";
+  display: inline-block;
+  width: 25px;
+  height: 2px;
+  background-color: var(--secondary);
+  margin-right: 10px;
+}
+
+.who-we-are-content .main-heading>h2 {
+  font-family: var(--Primary-font);
+  font-size: 65px;
+  color: #202020;
+  line-height: 1.1;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.timeline-header .main-heading>h2 span {
+  color: var(--secondary);
+}
+
+.timeline-header .description {
+  font-family: var(--font-400);
+  font-size: 14px;
+  color: #6a7382;
+  line-height: 22px;
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
+.timeline-wrapper {
+  position: relative;
+}
+
+.timeline-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+.timeline-col {
+  width: calc(50% - 40px);
+}
+
+.timeline-col.left {
+  margin-right: auto;
+  text-align: right;
+}
+
+.timeline-col.right {
+  margin-left: auto;
+  text-align: left;
+}
+
+.timeline-card {
+  display: inline-block;
+  background-color: #121826;
+  border: 1px solid #1d2538;
+  border-left: 3px solid var(--secondary);
+  padding: 22px 26px;
+  text-align: left;
+  max-width: 100%;
+}
+
+.timeline-year {
+  display: inline-block;
+  background-color: var(--secondary);
+  color: #ffffff;
+  font-family: var(--Primary-font);
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  padding: 3px 10px;
+  margin-bottom: 10px;
+}
+
+.timeline-title {
+  font-family: var(--font-600);
+  font-size: 15px;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
+  line-height: 1.3;
+}
+
+.timeline-desc {
+  font-family: var(--font-400);
+  font-size: 13px;
+  color: #8c97a8;
+  line-height: 20px;
+  margin-bottom: 0;
+}
+
+.timeline-marker {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  border: 2px solid var(--secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  flex-shrink: 0;
+}
+
+.timeline-marker span {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--secondary);
+}
+
+/* Central connecting line (desktop only) */
+@media (min-width: 992px) {
+  .timeline-wrapper::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    background-color: rgba(208, 28, 36, 0.25);
+    z-index: 1;
+  }
+}
+
+
+/* ==========================================
+   WHY MURTUZA
+   (reuses .command-center-wrapper /
+   .security-build-content patterns)
+   ========================================== */
+.why-murtuza-section {
+  background-color: #0b101d;
+  position: relative;
+}
+
+.why-murtuza-section .security-build-content {
+  padding-left: 0;
+  padding-right: 30px;
+}
+
+.why-murtuza-section .security-build-content .sub-title {
+  display: inline-flex;
+  align-items: center;
+  color: var(--secondary);
+  font-family: var(--font-700);
+  font-size: 13px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.why-murtuza-section .security-build-content .sub-title::before {
+  content: "";
+  display: inline-block;
+  width: 25px;
+  height: 2px;
+  background-color: var(--secondary);
+  margin-right: 10px;
+}
+
+.why-murtuza-section .main-heading.white-heading h2 span {
+  color: var(--secondary);
+}
+
+.why-murtuza-section .security-build-desc {
+  color: #a3acb9;
+}
+
+.why-murtuza-section .feature-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 30px 0;
+}
+
+.why-murtuza-section .feature-list li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 18px;
+  font-family: var(--font-500);
+  font-size: 14px;
+  color: #ffffff;
+}
+
+.why-murtuza-section .feature-list li i {
+  color: var(--secondary);
+  font-size: 18px;
+  margin-right: 12px;
+  flex-shrink: 0;
+}
+
+.control-room-badge {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-600);
+  font-size: 11px;
+  color: var(--secondary);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.control-room-badge i {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--secondary);
+  margin-right: 8px;
+}
+
+
+/* ==========================================
+   RESPONSIVE — ABOUT PAGE
+   (breakpoints match responsive.css)
+   ========================================== */
+
+/* Desktop / Large Screens */
+@media (max-width: 1199px) {
+  .page-banner-content h1 {
+    font-size: 42px;
+  }
+
+  .mvv-header .main-heading.white-heading h2 {
+    font-size: 40px;
+  }
+}
+
+/* Tablets */
+@media (max-width: 991px) {
+  .page-banner-section {
+    padding: 160px 0 60px 0;
+  }
+
+  .page-banner-content h1 {
+    font-size: 36px;
+  }
+
+  .why-murtuza-section .security-build-content {
+    padding-right: 0;
+    margin-bottom: 40px;
+  }
+
+  .timeline-col {
+    width: calc(50% - 30px);
+  }
+}
+
+/* Small Tablets / Mobile Landscape */
+@media (max-width: 767px) {
+  .page-banner-section {
+    padding: 140px 0 50px 0;
+  }
+
+  .page-banner-content h1 {
+    font-size: 28px;
+  }
+
+  .iso-cert-badge {
+    right: 10px;
+    padding: 10px 16px;
+  }
+
+  /* Collapse timeline to a single stacked column */
+  .timeline-wrapper::before {
+    left: 20px;
+    transform: none;
+  }
+
+  .timeline-item {
+    margin-bottom: 25px;
+  }
+
+  .timeline-col {
+    width: 100%;
+  }
+
+  .timeline-col.left,
+  .timeline-col.right {
+    text-align: left;
+    margin: 0 0 0 55px;
+  }
+
+  .timeline-col.left:empty,
+  .timeline-col.right:empty {
+    display: none;
+  }
+
+  .timeline-marker {
+    left: 20px;
+    top: 30px;
+    transform: translate(-50%, 0);
+  }
+}
+
+/* Mobile */
+@media (max-width: 575px) {
+  .breadcrumb-nav {
+    font-size: 11px;
+  }
+
+  .page-banner-content h1 {
+    font-size: 24px;
+  }
+
+  .page-banner-btn-group {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .page-banner-btn-group .btn-theme {
+    width: 100%;
+    text-align: center;
+  }
+
+  .command-center-info.text-center .command-center-title {
+    font-size: 32px;
+  }
+}

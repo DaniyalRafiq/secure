@@ -127,7 +127,7 @@
             <div class="row g-4">
                 <div class="col-lg-4 col-md-6 col-sm-12">
                     <div class="badge-items badge-items-border-1">
-                        <div class="services-item-icon">
+                        <div class="badge-item-icon">
                             <img src="assets/images/mission-1.png" alt="">
                         </div>
                         <h3 class="services-item-title">OUR MISSION</h3>
@@ -138,8 +138,8 @@
                 </div>
 
                 <div class="col-lg-4 col-md-6 col-sm-12">
-                    <div class="services-item-box">
-                        <div class="services-item-icon">
+                    <div class="badge-items badge-items-border-2">
+                        <div class="badge-item-icon">
                            <img src="assets/images/mission-2.png" alt="">
                         </div>
                         <h3 class="services-item-title">OUR VISION</h3>
@@ -150,8 +150,8 @@
                 </div>
 
                 <div class="col-lg-4 col-md-6 col-sm-12">
-                    <div class="services-item-box">
-                        <div class="services-item-icon">
+                    <div class="badge-items badge-items-border-3">
+                        <div class="badge-item-icon">
                             <img src="assets/images/mission-3.png" alt="">
                         </div>
                         <h3 class="services-item-title">OUR VALUES</h3>
@@ -184,8 +184,10 @@
                 <div class="timeline-item">
                     <div class="timeline-col left">
                         <div class="timeline-card">
-                            <span class="timeline-year">2004</span>
-                            <h4 class="timeline-title">Founded In London</h4>
+                           <div class="d-flex align-items-center">
+                             <span class="timeline-year">2004</span>
+                            <h4 class="timeline-title ms-3">Founded In London</h4>
+                           </div>
                             <p class="timeline-desc">Murtuza Hassanali launches the company with 12 officers and a
                                 vision for ethical, professional security.</p>
                         </div>
@@ -199,8 +201,10 @@
                     <div class="timeline-marker"><span></span></div>
                     <div class="timeline-col right">
                         <div class="timeline-card">
-                            <span class="timeline-year">2009</span>
-                            <h4 class="timeline-title">ISO 9001 Certified</h4>
+                            <div class="d-flex align-items-center">
+                                <span class="timeline-year">2009</span>
+                            <h4 class="timeline-title ms-3">ISO 9001 Certified</h4>
+                            </div>
                             <p class="timeline-desc">Becomes one of the first independent security firms in the
                                 South East to achieve ISO 9001 certification.</p>
                         </div>
@@ -210,8 +214,10 @@
                 <div class="timeline-item">
                     <div class="timeline-col left">
                         <div class="timeline-card">
-                            <span class="timeline-year">2013</span>
-                            <h4 class="timeline-title">CCTV Division Formed</h4>
+                          <div class="d-flex align-items-center">
+                              <span class="timeline-year">2013</span>
+                            <h4 class="timeline-title ms-3">CCTV Division Formed</h4>
+                          </div>
                             <p class="timeline-desc">A dedicated remote monitoring and CCTV division is launched to
                                 serve retail and commercial clients around the clock.</p>
                         </div>
@@ -225,8 +231,10 @@
                     <div class="timeline-marker"><span></span></div>
                     <div class="timeline-col right">
                         <div class="timeline-card">
-                            <span class="timeline-year">2018</span>
-                            <h4 class="timeline-title">Events Division Launched</h4>
+                            <div class="d-flex align-items-center">
+                                <span class="timeline-year">2018</span>
+                            <h4 class="timeline-title ms-3">Events Division Launched</h4>
+                            </div>
                             <p class="timeline-desc">Crowd management and VIP protection services are added,
                                 covering concerts, conferences, and private gatherings nationwide.</p>
                         </div>
@@ -236,8 +244,10 @@
                 <div class="timeline-item">
                     <div class="timeline-col left">
                         <div class="timeline-card">
-                            <span class="timeline-year">2026</span>
-                            <h4 class="timeline-title">20 Years Strong</h4>
+                           <div class="d-flex align-items-center">
+                             <span class="timeline-year">2026</span>
+                            <h4 class="timeline-title ms-3">20 Years Strong</h4>
+                           </div>
                             <p class="timeline-desc">Now protecting 1,200+ sites nationwide with 850+ trained
                                 officers and a 99.8% client retention rate.</p>
                         </div>

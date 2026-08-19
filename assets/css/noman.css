@@ -163,6 +163,23 @@
   border-top: 3px solid #D01C24;
 }
 
+.badge-items-border-2 {
+  border-top: 3px solid #FFAA00;
+}
+
+.badge-items-border-3 {
+  border-top: 3px solid #0D235C;
+}
+
+.badge-item-icon {
+  width: 55px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+
 .mvv-header {
   margin-bottom: 50px;
 }
@@ -559,5 +576,491 @@
 
   .command-center-info.text-center .command-center-title {
     font-size: 32px;
+  }
+}
+
+
+/* ==========================================
+   CONTACT PAGE — CUSTOM STYLES (contact.php)
+   Scoped under .contact-page. Reuses
+   .page-banner-section / .contact-form-card /
+   .btn-theme / badge border-color pattern.
+   ========================================== */
+
+/* --- Hero Banner (compact variant) --- */
+.contact-page .page-banner-section {
+  min-height: auto;
+  display: block;
+  padding: 190px 0 70px 0;
+}
+
+.contact-page .hero-tags {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 28px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.contact-page .hero-tags .hero-tag {
+  display: flex;
+  align-items: center;
+  font-family: var(--font-500);
+  font-size: 13px;
+  color: #e6eaf0;
+}
+
+.contact-page .hero-tags .hero-tag i {
+  color: var(--secondary);
+  font-size: 16px;
+  margin-right: 8px;
+}
+
+/* --- Contact Form + Info Section --- */
+.contact-page .contact-form-section {
+  background-color: #0b0e14;
+}
+
+.contact-page .contact-form-header {
+  margin-bottom: 30px;
+}
+
+.contact-page .contact-form-header .sub-title {
+  display: inline-flex;
+  align-items: center;
+  color: var(--secondary);
+  font-family: var(--font-700);
+  font-size: 13px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.contact-page .contact-form-header .sub-title::before {
+  content: "";
+  display: inline-block;
+  width: 25px;
+  height: 2px;
+  background-color: var(--secondary);
+  margin-right: 12px;
+}
+
+.contact-page .contact-form-header .main-heading.white-heading h2 span {
+  color: var(--secondary);
+}
+
+.contact-page .contact-form-header .description {
+  font-family: var(--font-400);
+  font-size: 14px;
+  color: #a0aab8;
+  line-height: 22px;
+  margin-top: 12px;
+  margin-bottom: 0;
+  max-width: 480px;
+}
+
+.contact-page .contact-form-card .privacy-note {
+  font-family: var(--font-400);
+  font-size: 11px;
+  color: #5d6778;
+  margin-bottom: 0;
+}
+
+/* --- Right: Direct Contact Info Card --- */
+.contact-page .contact-info-card {
+  background-color: #121826;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-top: 3px solid var(--secondary);
+  padding: 30px;
+}
+
+.contact-page .response-highlight-box {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  background-color: rgba(208, 28, 36, 0.08);
+  border: 1px solid rgba(208, 28, 36, 0.2);
+  padding: 18px;
+  margin-bottom: 30px;
+}
+
+.contact-page .response-highlight-box .icon-box {
+  width: 36px;
+  height: 36px;
+  background-color: rgba(208, 28, 36, 0.15);
+  border: 1px solid rgba(208, 28, 36, 0.3);
+  color: var(--secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  flex-shrink: 0;
+}
+
+.contact-page .response-highlight-box .response-title {
+  font-family: var(--Primary-font);
+  font-size: 16px;
+  color: #ffffff;
+  letter-spacing: 0.5px;
+  margin-bottom: 2px;
+}
+
+.contact-page .response-highlight-box .response-tag {
+  display: block;
+  font-family: var(--font-500);
+  font-size: 11px;
+  color: var(--secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
+}
+
+.contact-page .response-highlight-box p {
+  font-family: var(--font-400);
+  font-size: 12px;
+  color: #a0aab8;
+  line-height: 18px;
+  margin-bottom: 0;
+}
+
+.contact-page .direct-contact-title {
+  font-family: var(--font-700);
+  font-size: 12px;
+  color: var(--secondary);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+
+.contact-page .direct-contact-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin: 0 0 30px 0;
+}
+
+.contact-page .direct-contact-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.contact-page .direct-contact-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.contact-page .direct-contact-item .contact-label {
+  display: block;
+  font-family: var(--font-600);
+  font-size: 10px;
+  color: #6a7382;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.contact-page .direct-contact-item .contact-value {
+  font-family: var(--font-500);
+  font-size: 14px;
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.contact-page .direct-contact-item .contact-value:hover {
+  color: var(--secondary);
+}
+
+.contact-page .contact-tag {
+  flex-shrink: 0;
+  font-family: var(--font-700);
+  font-size: 10px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 3px;
+  white-space: nowrap;
+}
+
+.contact-page .contact-tag.tag-red {
+  background-color: rgba(208, 28, 36, 0.15);
+  color: var(--secondary);
+  border: 1px solid rgba(208, 28, 36, 0.3);
+}
+
+.contact-page .contact-tag.tag-outline {
+  background-color: transparent;
+  color: #8c97a8;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.contact-page .contact-info-image {
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-page .contact-info-image img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  display: block;
+}
+
+.contact-page .contact-info-image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.1) 60%);
+}
+
+.contact-page .contact-info-image .img-caption {
+  position: absolute;
+  left: 16px;
+  right: 16px;
+  bottom: 12px;
+  z-index: 1;
+}
+
+.contact-page .contact-info-image .img-caption .caption-title {
+  display: block;
+  font-family: var(--font-700);
+  font-size: 12px;
+  color: #ffffff;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 2px;
+}
+
+.contact-page .contact-info-image .img-caption .caption-desc {
+  display: block;
+  font-family: var(--font-400);
+  font-size: 11px;
+  color: #c3cad4;
+}
+
+/* --- Locations Section --- */
+.contact-page .locations-section {
+  background-color: #0b0e14;
+}
+
+.contact-page .locations-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 30px;
+  margin-bottom: 45px;
+}
+
+.contact-page .locations-header .sub-title {
+  display: inline-flex;
+  align-items: center;
+  color: var(--secondary);
+  font-family: var(--font-700);
+  font-size: 13px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.contact-page .locations-header .sub-title::before {
+  content: "";
+  display: inline-block;
+  width: 25px;
+  height: 2px;
+  background-color: var(--secondary);
+  margin-right: 10px;
+}
+
+.contact-page .locations-header .main-heading.white-heading h2 span {
+  color: var(--secondary);
+}
+
+.contact-page .locations-header .description {
+  font-family: var(--font-400);
+  font-size: 14px;
+  color: #a0aab8;
+  line-height: 22px;
+  max-width: 340px;
+  text-align: right;
+  margin-bottom: 6px;
+}
+
+.contact-page .map-panel {
+  background-color: #121826;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  height: 100%;
+  min-height: 380px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.contact-page .map-panel svg {
+  max-width: 260px;
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.contact-page .map-panel .map-pin-label {
+  font-family: var(--font-600);
+  font-size: 9px;
+  letter-spacing: 0.5px;
+}
+
+.contact-page .map-caption-title {
+  font-family: var(--Primary-font);
+  font-size: 18px;
+  color: #ffffff;
+  letter-spacing: 1px;
+  margin-bottom: 6px;
+}
+
+.contact-page .map-caption-list {
+  font-family: var(--font-400);
+  font-size: 12px;
+  color: #6a7382;
+  margin-bottom: 0;
+}
+
+.contact-page .office-card {
+  background-color: #121826;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-left: 3px solid #D01C24;
+  padding: 22px 24px;
+  margin-bottom: 16px;
+}
+
+.contact-page .office-card:last-child {
+  margin-bottom: 0;
+}
+
+.contact-page .office-card.office-card-border-2 {
+  border-left-color: #FFAA00;
+}
+
+.contact-page .office-card.office-card-border-3 {
+  border-left-color: #0D235C;
+}
+
+.contact-page .office-card .office-title {
+  font-family: var(--font-700);
+  font-size: 13px;
+  color: #ffffff;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.contact-page .office-card .office-address {
+  font-family: var(--font-400);
+  font-size: 13px;
+  color: #a0aab8;
+  line-height: 20px;
+  margin-bottom: 8px;
+}
+
+.contact-page .office-card .office-phone {
+  display: block;
+  font-family: var(--font-600);
+  font-size: 14px;
+  color: var(--secondary);
+  text-decoration: none;
+  margin-bottom: 4px;
+}
+
+.contact-page .office-card .office-hours {
+  display: block;
+  font-family: var(--font-400);
+  font-size: 11px;
+  color: #6a7382;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+
+/* ==========================================
+   RESPONSIVE — CONTACT PAGE
+   (breakpoints match responsive.css)
+   ========================================== */
+
+/* Desktop / Large Screens */
+@media (max-width: 1199px) {
+  .contact-page .locations-header .description {
+    max-width: 280px;
+  }
+}
+
+/* Tablets */
+@media (max-width: 991px) {
+  .contact-page .page-banner-section {
+    padding: 160px 0 60px 0;
+  }
+
+  .contact-page .hero-tags {
+    gap: 18px 24px;
+  }
+
+  .contact-page .contact-info-card {
+    margin-top: 40px;
+  }
+
+  .contact-page .locations-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .contact-page .locations-header .description {
+    text-align: left;
+    max-width: 100%;
+  }
+
+  .contact-page .map-panel {
+    margin-bottom: 20px;
+  }
+}
+
+/* Small Tablets / Mobile Landscape */
+@media (max-width: 767px) {
+  .contact-page .page-banner-section {
+    padding: 140px 0 50px 0;
+  }
+
+  .contact-page .hero-tags {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .contact-page .contact-info-card {
+    padding: 22px;
+  }
+
+  .contact-page .direct-contact-item {
+    flex-wrap: wrap;
+  }
+}
+
+/* Mobile */
+@media (max-width: 575px) {
+  .contact-page .contact-form-card {
+    padding: 24px;
+  }
+
+  .contact-page .office-card {
+    padding: 18px;
   }
 }

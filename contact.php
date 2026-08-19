@@ -202,7 +202,7 @@
                     rapid deployment.</p>
             </div>
 
-            <div class="row g-4 align-items-stretch">
+            <div class="row g-2 align-items-stretch">
                 <!-- Map Graphic -->
                 <div class="col-lg-6 col-md-12">
                     <div class="map-panel">
@@ -212,16 +212,16 @@
                             <line x1="82" y1="95" x2="100" y2="160" stroke="rgba(255,255,255,0.15)" stroke-width="1.5" stroke-dasharray="4 4" />
                             <line x1="100" y1="160" x2="150" y2="215" stroke="rgba(255,255,255,0.15)" stroke-width="1.5" stroke-dasharray="4 4" />
 
-                            <circle cx="70" cy="30" r="5" fill="#8c97a8" />
+                            <circle cx="70" cy="30" r="5" fill="#fff" />
                             <text x="70" y="18" text-anchor="middle" class="map-pin-label">GLASGOW</text>
 
-                            <circle cx="115" cy="90" r="5" fill="#8c97a8" />
+                            <circle cx="115" cy="90" r="5" fill="#fff" />
                             <text x="130" y="86" text-anchor="start" class="map-pin-label">LEEDS</text>
 
-                            <circle cx="82" cy="95" r="5" fill="#8c97a8" />
+                            <circle cx="82" cy="95" r="5" fill="#fff" />
                             <text x="55" y="88" text-anchor="end" class="map-pin-label">MANCHESTER</text>
 
-                            <circle cx="100" cy="160" r="5" fill="#8c97a8" />
+                            <circle cx="100" cy="160" r="5" fill="#fff" />
                             <text x="82" y="153" text-anchor="end" class="map-pin-label">BIRMINGHAM</text>
 
                             <circle cx="150" cy="215" r="8" fill="#D01C24" />

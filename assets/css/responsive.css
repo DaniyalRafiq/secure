@@ -95,6 +95,50 @@
   .pre-footer-cta .cta-title {
     font-size: 32px;
   }
+
+  .why-choose-content .main-heading.white-heading h2 {
+    font-size: 40px;
+  }
+
+  .feature-card {
+    padding: 28px 22px;
+  }
+
+  .action-card-tall {
+    height: 440px;
+  }
+
+  .action-card-sm {
+    height: 208px;
+  }
+
+  .action-card-wide {
+    height: 216px;
+  }
+
+  .onboarding-banner-box {
+    padding: 20px 25px;
+  }
+
+  .onboarding-banner-box .banner-title {
+    font-size: 21px;
+  }
+
+.card-body-content {
+        padding: 25px 30px;
+    }
+    
+    .card-title {
+        font-size: 20px;
+    }
+
+    .metrics-group {
+        gap: 20px;
+    }
+
+    .metric-num {
+        font-size: 22px;
+    }
 }
 
 @media (max-width: 991px) {
@@ -286,6 +330,68 @@
   .site-footer {
     padding-top: 50px;
   }
+
+  .why-choose-section {
+    padding: 70px 0;
+  }
+
+  .why-choose-content {
+    padding-right: 0;
+    text-align: left;
+  }
+
+  .why-choose-desc {
+    max-width: 600px;
+  }
+
+  .action-card-tall {
+    height: 380px;
+  }
+
+  .action-card-sm {
+    height: 200px;
+  }
+
+  .action-card-wide {
+    height: 200px;
+  }
+
+  .sec-table {
+    padding: 60px 0;
+  }
+
+  .comparison-table th {
+    padding: 16px 18px;
+    font-size: 14px;
+  }
+
+  .comparison-table td {
+    padding: 15px 18px;
+  }
+
+  .comparison-table .feature-name {
+    font-size: 13px;
+  }
+  .sec-results {
+        padding: 70px 0;
+    }
+
+    .card-img-box {
+        height: 240px;
+    }
+
+    .category-badge.badge-right {
+        right: auto;
+        left: 20px; /* Reset position on tablet stack */
+    }
+
+    .info-block {
+        margin-bottom: 15px;
+    }
+
+    .challenge-solution-row .col-md-4:last-child .info-block {
+        margin-bottom: 0;
+    }
 }
 
 /* Landscape Mobile */
@@ -437,6 +543,85 @@
     text-align: center;
     justify-content: center;
   }
+
+  .security-action-section {
+    padding: 60px 0;
+  }
+
+  .action-card-tall,
+  .action-card-sm,
+  .action-card-wide {
+    height: 260px;
+    /* Uniform height on stacked mobile screens */
+  }
+
+  .action-card-overlay {
+    padding: 16px;
+  }
+
+  .action-card-title {
+    font-size: 18px;
+  }
+
+  .onboarding-banner-box {
+    padding: 20px;
+  }
+
+  .onboarding-banner-box .banner-title {
+    font-size: 18px;
+  }
+
+  .onboarding-banner-box .btn-theme {
+    width: 100%;
+    text-align: center;
+  }
+
+  .comparison-table-wrapper {
+    margin-top: 30px;
+  }
+
+  .comparison-table th {
+    padding: 14px 12px;
+    font-size: 12px;
+    letter-spacing: 1px;
+  }
+
+  .comparison-table td {
+    padding: 12px;
+  }
+
+  .comparison-table .feature-name {
+    font-size: 12px;
+  }
+
+  .comparison-table .icon-check,
+  .comparison-table .icon-cross {
+    font-size: 17px;
+  }
+  .case-studies-list {
+        margin-top: 35px;
+        gap: 20px;
+    }
+
+    .card-body-content {
+        padding: 20px;
+    }
+
+    .card-title {
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+
+    .card-footer-metrics {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .metrics-group {
+        width: 100%;
+        justify-content: space-between;
+    }
 }
 
 /* Portrait Mobile */
@@ -582,4 +767,52 @@
   .cta-info-list .info-text .value {
     font-size: 13px;
   }
+
+  .why-choose-section {
+    padding: 50px 0;
+  }
+
+  .why-choose-content .main-heading.white-heading h2 {
+    font-size: 32px;
+  }
+
+  .feature-card {
+    padding: 25px 20px;
+  }
+
+  .feature-title {
+    font-size: 16px;
+  }
+
+  .feature-desc {
+    font-size: 12px;
+  }
+
+  .action-card-tall,
+  .action-card-sm,
+  .action-card-wide {
+    height: 220px;
+  }
+
+  .onboarding-banner-box .banner-sub-title {
+    font-size: 10px;
+  }
+
+  .onboarding-banner-box .banner-title {
+    font-size: 16px;
+  }
+
+  .comparison-table {
+    min-width: 520px;
+    /* Ensures readable table scroll on small phones */
+  }
+  .metrics-group {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .metric-num {
+        font-size: 24px;
+    }
 }

@@ -8,6 +8,7 @@
 <link rel="stylesheet" href="assets/css/responsive.css" />
 <!-- AOS Animation -->
 <link rel="stylesheet" href="assets/css/aos.css" />
+<link rel="stylesheet" href="assets/css/noman.css" />
 <!-- Slick Carousel -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />

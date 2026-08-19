@@ -359,7 +359,170 @@
         </div>
     </section>
     <!-- section partner -->
+    <section class="why-choose-section">
+        <div class="container">
+            <div class="row align-items-center gy-5">
+                <!-- Left Side: Heading, Paragraph & CTA -->
+                <div class="col-lg-5 col-md-12">
+                    <div class="why-choose-content">
+                        <div class="main-heading white-heading">
+                            <h2>WHY CHOOSE<br>MURTUZA</h2>
+                        </div>
+                        <p class="why-choose-desc">
+                            We're not the biggest firm — we're the most committed. Every client receives the same level
+                            of attention we'd give our own family.
+                        </p>
+                        <a href="services.html" class="btn btn-theme">
+                            SEE ALL SERVICES <i class="ri-arrow-right-s-line"></i>
+                        </a>
+                    </div>
+                </div>
 
+                <!-- Right Side: 2x2 Feature Cards Grid -->
+                <div class="col-lg-7 col-md-12">
+                    <div class="row g-4">
+                        <!-- Feature Box 1 -->
+                        <div class="col-sm-6 col-12">
+                            <div class="feature-card">
+                                <div class="feature-icon-box">
+                                    <i class="ri-shield-check-line"></i>
+                                </div>
+                                <h4 class="feature-title">FULLY LICENSED & BONDED</h4>
+                                <p class="feature-desc">
+                                    Every operative carries full licensing and insurance, protecting your business from
+                                    liability at every assignment.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Feature Box 2 -->
+                        <div class="col-sm-6 col-12">
+                            <div class="feature-card">
+                                <div class="feature-icon-box">
+                                    <i class="ri-eye-line"></i>
+                                </div>
+                                <h4 class="feature-title">24/7 COMMAND CENTRE</h4>
+                                <p class="feature-desc">
+                                    Our operations centre never sleeps. Real-time oversight of every deployed unit,
+                                    every night, all year.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Feature Box 3 -->
+                        <div class="col-sm-6 col-12">
+                            <div class="feature-card">
+                                <div class="feature-icon-box">
+                                    <i class="ri-radar-line"></i>
+                                </div>
+                                <h4 class="feature-title">RAPID INCIDENT RESPONSE</h4>
+                                <p class="feature-desc">
+                                    Sub-90-second escalation protocol from detection to active response — faster than
+                                    the industry average by 2x.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Feature Box 4 -->
+                        <div class="col-sm-6 col-12">
+                            <div class="feature-card">
+                                <div class="feature-icon-box">
+                                    <i class="ri-user-shared-line"></i>
+                                </div>
+                                <h4 class="feature-title">DEDICATED ACCOUNT TEAMS</h4>
+                                <p class="feature-desc">
+                                    One point of contact, always available. No call centres, no runarounds — just your
+                                    account manager, direct line.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="security-action-section">
+        <div class="container">
+            <!-- Section Header -->
+            <div class="row align-items-end mb-4 mb-md-5">
+                <div class="col-lg-6 col-md-7">
+                    <div class="main-heading ">
+                        <h2>SECURITY IN ACTION</h2>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-5 text-md-end text-start">
+                    <p class="section-top-desc">
+                        A glimpse into the breadth of environments we protect — from<br class="d-none d-lg-block">
+                        high-profile events to critical infrastructure.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Portfolio Grid Layout -->
+            <div class="row g-3 g-lg-4">
+                <!-- Col 1: Tall Card Left -->
+                <div class="col-lg-3 col-md-6 col-12">
+                    <div class="action-card action-card-tall">
+                        <img src="assets/images/security-action-1.png" alt="Event Security" class="action-card-img">
+                        <div class="action-card-overlay">
+                            <h4 class="action-card-title">EVENT SECURITY</h4>
+                            <p class="action-card-desc">Crowd management & access control</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Col 2: Middle Stacked Grid (2 Top, 1 Wide Bottom) -->
+                <div class="col-lg-6 col-md-12 col-12">
+                    <div class="row g-3 g-lg-4">
+                        <div class="col-md-6 col-12">
+                            <div class="action-card action-card-sm">
+                                <img src="assets/images/security-action-2.png" alt="Mobile Patrol"
+                                    class="action-card-img">
+                                <div class="action-card-overlay">
+                                    <h4 class="action-card-title">MOBILE PATROL</h4>
+                                    <p class="action-card-desc">24/7 roving security patrols</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-12">
+                            <div class="action-card action-card-sm">
+                                <img src="assets/images/security-action-3.png" alt="Corporate Sites"
+                                    class="action-card-img">
+                                <div class="action-card-overlay">
+                                    <h4 class="action-card-title">CORPORATE SITES</h4>
+                                    <p class="action-card-desc">Premises protection & front desk security</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="action-card action-card-wide">
+                                <img src="assets/images/security-action-4.png" alt="Response Teams"
+                                    class="action-card-img">
+                                <div class="action-card-overlay">
+                                    <h4 class="action-card-title">RESPONSE TEAMS</h4>
+                                    <p class="action-card-desc">Armed tactical response officers — deployed in minutes
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Col 3: Tall Card Right -->
+                <div class="col-lg-3 col-md-6 col-12">
+                    <div class="action-card action-card-tall">
+                        <img src="assets/images/security-action-5.png" alt="CCTV Tech" class="action-card-img">
+                        <div class="action-card-overlay">
+                            <h4 class="action-card-title">CCTV TECH</h4>
+                            <p class="action-card-desc">Remote monitoring & surveillance</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <section class="ser-01">
         <div class="container">
@@ -415,6 +578,7 @@
             </div>
         </div>
     </section>
+
 
     <section class="process-section">
         <div class="container">

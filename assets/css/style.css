@@ -2424,3 +2424,108 @@ hr {
   border-color: var(--secondary);
   color: #ffffff;
 }
+
+/* ==========================================
+   Custom Non-Bootstrap Services Dropdown Menu
+   ========================================== */
+
+.custom-dropdown-wrapper {
+  position: relative;
+}
+
+.custom-dropdown-wrapper .dropdown-arrow {
+  margin-left: 4px;
+  transition: transform 0.3s ease;
+  display: inline-block;
+}
+
+.custom-dropdown-wrapper:hover .dropdown-arrow {
+  transform: rotate(180deg);
+}
+
+/* Hidden container by default */
+.custom-dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(12px);
+  width: 780px;
+  background-color: #0b1727;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 999;
+}
+
+/* Smooth Hover Display */
+.custom-dropdown-wrapper:hover .custom-dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* Grid Layout matching the image */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px 24px;
+}
+
+/* Service Item Links */
+.service-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.service-item:hover,
+.service-item.active {
+  background-color: rgba(255, 255, 255, 0.05);
+  transform: translateX(4px);
+}
+
+/* Icon Container Styling */
+.service-icon {
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  background-color: #122338;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.service-icon i {
+  font-size: 20px;
+  color: #0088ff;
+}
+
+.service-item:hover .service-icon {
+  background-color: #0088ff;
+}
+
+.service-item:hover .service-icon i {
+  color: #ffffff;
+}
+
+/* Title Styling */
+.service-title {
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.services-grid a {
+  display: flex !important;
+}

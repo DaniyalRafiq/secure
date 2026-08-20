@@ -163,7 +163,7 @@ document.addEventListener("DOMContentLoaded", () => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           runCounterAnimation(entry.target);
-          observer.unobserve(entry.target);
+          observer.unobserve(entry.target); 
         }
       });
     },

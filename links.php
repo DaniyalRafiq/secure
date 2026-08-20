@@ -1,5 +1,5 @@
 <!-- Favicon -->
-<link rel="icon" type="image/png" href="assets/images/favicon.ico" />
+<link rel="icon" type="image/png" href="assets/images/logo.png" />
 <!-- bootstrap 5.1 -->
 <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
 <!-- Style css -->

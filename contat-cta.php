@@ -95,10 +95,9 @@
                                 <label for="serviceRequired" class="form-label">SERVICE REQUIRED</label>
                                 <select class="form-select form-control" id="serviceRequired" required>
                                     <option value="" selected disabled>Select Service Required</option>
-                                    <option value="manned-guarding">Manned Guarding</option>
-                                    <option value="event-security">Event Security</option>
-                                    <option value="commercial-security">Commercial Security</option>
-                                    <option value="construction-security">Construction Site Security</option>
+                                    <?php require_once 'services-data.php'; foreach ($services as $optSlug => $optService): ?>
+                                    <option value="<?php echo $optSlug; ?>"><?php echo e($optService['name']); ?></option>
+                                    <?php endforeach; ?>
                                 </select>
                                 <span class="invalid-feedback">Please select a required service.</span>
                             </div>

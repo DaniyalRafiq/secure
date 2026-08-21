@@ -1358,3 +1358,96 @@
     padding: 14px 10px;
   }
 }
+
+/* ==========================================
+   Footer — Services widget in 2 columns
+   (inherits every colour, size and hover state
+   from .site-footer .footer-menu in style.css)
+   ========================================== */
+.site-footer .footer-menu-2col {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 22px;
+}
+
+/* Last row of the grid closes without a divider */
+.site-footer .footer-menu-2col li:nth-last-child(-n + 2) {
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+/* ==========================================
+   Offcanvas burger menu — Services submenu
+   ========================================== */
+.offcanvas .mobile-submenu-toggle .submenu-arrow {
+  display: inline-block;
+  margin-left: 4px;
+  transition: transform 0.3s ease;
+}
+
+.offcanvas .mobile-submenu-toggle[aria-expanded="true"] .submenu-arrow {
+  transform: rotate(180deg);
+}
+
+.offcanvas .mobile-submenu {
+  margin: 8px 0 10px;
+  padding: 4px 0 4px 12px;
+  border-left: 2px solid rgba(200, 16, 46, 0.4);
+}
+
+.offcanvas .mobile-submenu li {
+  margin-bottom: 2px;
+}
+
+.offcanvas .mobile-submenu a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 10px;
+  border-radius: 8px;
+  font-family: var(--font-400);
+  font-size: 0.875rem;
+  line-height: 1.35;
+  color: #a8b2c1 !important;
+  text-decoration: none;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.offcanvas .mobile-submenu a:hover,
+.offcanvas .mobile-submenu a.active {
+  background-color: rgba(255, 255, 255, 0.06);
+  color: #ffffff !important;
+}
+
+.offcanvas .mobile-submenu a i {
+  flex: 0 0 auto;
+  font-size: 16px;
+  color: #0088ff;
+}
+
+/* Tablet — keep the footer services list readable when the widget halves */
+@media (max-width: 991px) {
+  .site-footer .footer-menu-2col {
+    column-gap: 18px;
+  }
+}
+
+/* Small phones — a single readable column beats two cramped ones */
+@media (max-width: 575px) {
+  .site-footer .footer-menu-2col {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .site-footer .footer-menu-2col li:nth-last-child(-n + 2) {
+    border-bottom: 1px solid rgba(200, 16, 46, 0.4);
+    padding-bottom: 8px;
+    margin-bottom: 10px;
+  }
+
+  .site-footer .footer-menu-2col li:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+}

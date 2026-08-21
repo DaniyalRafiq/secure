@@ -1,3 +1,9 @@
+<?php
+require_once 'services-data.php';
+
+$page         = basename($_SERVER['PHP_SELF'], '.php');
+$servicesHome = first_service_slug() . '.php';
+?>
 <!-- footer -->
 <!-- Pre-Footer CTA Banner -->
 <section class="pre-footer-cta">
@@ -28,7 +34,7 @@
             <!-- Column 1: Brand & Contact -->
             <div class="col-lg-4 col-md-6 col-12">
                 <div class="footer-widget brand-widget">
-                    <a href="#" class="footer-logo">
+                    <a href="index.php" class="footer-logo">
                         <img src="assets/images/logo.png" alt="Murtuza Security Logo">
                     </a>
                     <p class="brand-desc">
@@ -48,17 +54,14 @@
                 </div>
             </div>
 
-            <!-- Column 2: Services -->
-            <div class="col-lg-3 col-md-6 col-12">
+            <!-- Column 2: Services (2 items per row) -->
+            <div class="col-lg-4 col-md-6 col-12">
                 <div class="footer-widget">
                     <h4 class="widget-title">SERVICES</h4>
-                    <ul class="footer-menu list-unstyled">
-                        <li><a href="#">Static Guarding</a></li>
-                        <li><a href="#">Mobile Patrol</a></li>
-                        <li><a href="#">CCTV Monitoring</a></li>
-                        <li><a href="#">Event Security</a></li>
-                        <li><a href="#">Armed Officers</a></li>
-                        <li><a href="#">Residential Security</a></li>
+                    <ul class="footer-menu footer-menu-2col list-unstyled">
+                        <?php foreach ($services as $navSlug => $navService): ?>
+                        <li><a href="<?php echo $navSlug; ?>.php"><?php echo e($navService['name']); ?></a></li>
+                        <?php endforeach; ?>
                     </ul>
                 </div>
             </div>
@@ -68,25 +71,25 @@
                 <div class="footer-widget">
                     <h4 class="widget-title">COMPANY</h4>
                     <ul class="footer-menu list-unstyled">
-                        <li><a href="#">About Company</a></li>
-                        <li><a href="#">Our Officers</a></li>
-                        <li><a href="#">Certifications</a></li>
-                        <li><a href="#">Careers</a></li>
-                        <li><a href="#">News & Updates</a></li>
+                        <li><a href="about-us.php">About Company</a></li>
+                        <li><a href="about-us.php#our-history">Our History</a></li>
+                        <li><a href="clients.php">Our Clients</a></li>
+                        <li><a href="<?php echo $servicesHome; ?>">All Services</a></li>
+                        <li><a href="contact-us.php">Careers</a></li>
                     </ul>
                 </div>
             </div>
 
             <!-- Column 4: Support -->
-            <div class="col-lg-3 col-md-6 col-12">
+            <div class="col-lg-2 col-md-6 col-12">
                 <div class="footer-widget">
                     <h4 class="widget-title">SUPPORT</h4>
                     <ul class="footer-menu list-unstyled">
-                        <li><a href="#">Client Portal</a></li>
-                        <li><a href="#">Report an Incident</a></li>
-                        <li><a href="#">Emergency Line</a></li>
-                        <li><a href="#">Request a Quote</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="contact-us.php">Contact Us</a></li>
+                        <li><a href="tel:+10000000000">Emergency Line</a></li>
+                        <li><a href="contact-us.php">Request a Quote</a></li>
+                        <li><a href="privacy-policy.php">Privacy Policy</a></li>
+                        <li><a href="terms-and-conditions.php">Terms &amp; Conditions</a></li>
                     </ul>
                 </div>
             </div>
@@ -126,55 +129,57 @@
     });
 </script>
 
-<!-- Offcanvas Side Bar -->
+<!-- Offcanvas Side Bar (mobile / tablet burger menu) -->
 <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
     <div class="offcanvas-header">
-        <a href="#"><img src="assets/images/logo.png" alt="logo"></a>
+        <a href="index.php"><img src="assets/images/logo.png" alt="logo"></a>
         <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
     <div class="offcanvas-body">
         <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
             <li class="nav-item">
-                <a class="nav-link active" href="https://oxfordassignment.com/">Home</a>
+                <a class="nav-link <?php if ($page == 'index') echo 'active'; ?>" href="index.php">Home</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link " href="assignment">Assignment</a>
+                <a class="nav-link <?php if ($page == 'about-us') echo 'active'; ?>" href="about-us.php">About Us</a>
             </li>
-            <!-- <li class="nav-item dropdown">
-                <a class="nav-link " href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
-                    aria-expanded="false">
-                    Services <i class="fa fa-angle-down"></i>
+
+            <!-- Services accordion -->
+            <li class="nav-item">
+                <a class="nav-link mobile-submenu-toggle <?php echo array_key_exists($page, $services) ? '' : 'collapsed'; ?>"
+                    data-bs-toggle="collapse" href="#mobileServicesMenu" role="button"
+                    aria-expanded="<?php echo array_key_exists($page, $services) ? 'true' : 'false'; ?>"
+                    aria-controls="mobileServicesMenu">
+                    Services <i class="ri-arrow-down-s-line submenu-arrow"></i>
                 </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <li><a class="dropdown-item" href="#">Service 1</a></li>
-                    <li><a class="dropdown-item" href="#">Service 2</a></li>
-                    <li><a class="dropdown-item" href="#">Service 3</a></li>
-                    <li><a class="dropdown-item" href="#">Service 4</a></li>
+                <ul class="mobile-submenu collapse list-unstyled <?php if (array_key_exists($page, $services)) echo 'show'; ?>"
+                    id="mobileServicesMenu">
+                    <?php foreach ($services as $navSlug => $navService): ?>
+                    <li>
+                        <a href="<?php echo $navSlug; ?>.php" class="<?php if ($page == $navSlug) echo 'active'; ?>">
+                            <i class="<?php echo e($navService['icon']); ?>"></i>
+                            <span><?php echo e($navService['name']); ?></span>
+                        </a>
+                    </li>
+                    <?php endforeach; ?>
                 </ul>
-            </li> -->
+            </li>
+
             <li class="nav-item">
-                <a class="nav-link " href="dissertation">
-                    Dissertation
-                </a>
+                <a class="nav-link <?php if ($page == 'clients') echo 'active'; ?>" href="clients.php">Clients</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link " href="research-paper">
-                    Research Paper
-                </a>
+                <a class="nav-link <?php if ($page == 'contact-us') echo 'active'; ?>" href="contact-us.php">Contact Us</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link " href="thesis">
-                    Thesis
-                </a>
+                <a class="nav-link <?php if ($page == 'privacy-policy') echo 'active'; ?>" href="privacy-policy.php">Privacy Policy</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link " href="online-exam">
-                    Online Exam
-                </a>
+                <a class="nav-link <?php if ($page == 'terms-and-conditions') echo 'active'; ?>" href="terms-and-conditions.php">Terms &amp; Conditions</a>
             </li>
         </ul>
         <div class="mt-3">
-            <a href="#" class="btn btn-theme-yellow">Live Chat</a>
+            <a href="contact-us.php" class="btn btn-theme w-100">Get Started</a>
         </div>
     </div>
 </div>

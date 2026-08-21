@@ -19,7 +19,7 @@
     <section class="page-banner-section">
         <div class="container">
             <nav class="breadcrumb-nav">
-                <a href="index">Home</a>
+                <a href="index.php">Home</a>
                 <span class="separator">&#8226;</span>
                 <span class="current">Clients</span>
             </nav>
@@ -77,7 +77,7 @@
                                 <li>EVENTBRITE PRO</li>
                                 <li>LIVE NATION</li>
                             </ul>
-                            <a href="#" class="industry-link">
+                            <a href="event-security-management.php" class="industry-link">
                                 LEARN MORE <i class="ri-arrow-right-s-line"></i>
                             </a>
                         </div>
@@ -100,7 +100,7 @@
                                 <li>HAMMERSON GROUP</li>
                                 <li>CBRE</li>
                             </ul>
-                            <a href="#" class="industry-link">
+                            <a href="security-guard-services.php" class="industry-link">
                                 LEARN MORE <i class="ri-arrow-right-s-line"></i>
                             </a>
                         </div>
@@ -122,7 +122,7 @@
                                 <li>SKANSKA UK</li>
                                 <li>VINCI CONSTRUCTION</li>
                             </ul>
-                            <a href="#" class="industry-link">
+                            <a href="cctv-surveillance-solutions.php" class="industry-link">
                                 LEARN MORE <i class="ri-arrow-right-s-line"></i>
                             </a>
                         </div>
@@ -144,7 +144,7 @@
                                 <li>COUNTRYSIDE PLC</li>
                                 <li>L&amp;G HOUSING</li>
                             </ul>
-                            <a href="#" class="industry-link">
+                            <a href="access-control-screening.php" class="industry-link">
                                 LEARN MORE <i class="ri-arrow-right-s-line"></i>
                             </a>
                         </div>
@@ -167,7 +167,7 @@
                                 <li>HAMMERSON GROUP</li>
                                 <li>CBRE</li>
                             </ul>
-                            <a href="#" class="industry-link">
+                            <a href="electronic-security-systems.php" class="industry-link">
                                 LEARN MORE <i class="ri-arrow-right-s-line"></i>
                             </a>
                         </div>
@@ -189,7 +189,7 @@
                                 <li>DELOITTE LONDON</li>
                                 <li>CLIFFORD CHANCE</li>
                             </ul>
-                            <a href="#" class="industry-link">
+                            <a href="executive-protection-services.php" class="industry-link">
                                 LEARN MORE <i class="ri-arrow-right-s-line"></i>
                             </a>
                         </div>

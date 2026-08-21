@@ -30,7 +30,7 @@
                             <a href="#" data-bs-target="#exampleModalToggle" data-bs-toggle="modal"
                                 class="btn btn-theme">Get A Security Plan</a>
 
-                            <a href="#" class="btn btn-theme white-btn">
+                            <a href="security-guard-services.php" class="btn btn-theme white-btn">
                                 Our Services <i class="bi bi-arrow-right"></i>
                             </a>
                         </div>
@@ -119,7 +119,7 @@
                             </li>
                         </ul>
 
-                        <a href="#" class="btn btn-theme">
+                        <a href="about-us.php" class="btn btn-theme">
                             OUR FULL STORY <i class="ri-arrow-right-s-line"></i>
                         </a>
                     </div>
@@ -372,7 +372,7 @@
                             We're not the biggest firm — we're the most committed. Every client receives the same level
                             of attention we'd give our own family.
                         </p>
-                        <a href="services.html" class="btn btn-theme">
+                        <a href="security-guard-services.php" class="btn btn-theme">
                             SEE ALL SERVICES <i class="ri-arrow-right-s-line"></i>
                         </a>
                     </div>
@@ -446,7 +446,7 @@
     <section class="security-action-section">
         <div class="container">
             <!-- Section Header -->
-            <div class="row align-items-end mb-4 mb-md-5">
+            <div class="row align-items-center mb-2 mb-md-2">
                 <div class="col-lg-6 col-md-7">
                     <div class="main-heading ">
                         <h2>SECURITY IN ACTION</h2>
@@ -671,7 +671,7 @@
                             <h3 class="industry-title">EVENTS & ENTERTAINMENT</h3>
                             <p class="industry-desc">Concerts, galas, conferences, and sporting events — we handle crowd
                                 flow, VIP protection, and emergency response.</p>
-                            <a href="#" class="industry-link">
+                            <a href="event-security-management.php" class="industry-link">
                                 LEARN MORE <i class="ri-arrow-right-s-line"></i>
                             </a>
                         </div>
@@ -688,7 +688,7 @@
                             <h3 class="industry-title">COMMERCIAL PROPERTIES</h3>
                             <p class="industry-desc">Office towers, retail centres, and industrial estates protected
                                 around the clock with visible deterrence.</p>
-                            <a href="#" class="industry-link">
+                            <a href="security-guard-services.php" class="industry-link">
                                 LEARN MORE <i class="ri-arrow-right-s-line"></i>
                             </a>
                         </div>
@@ -705,7 +705,7 @@
                             <h3 class="industry-title">CONSTRUCTION SITES</h3>
                             <p class="industry-desc">High-value equipment and materials protected from theft, vandalism,
                                 and unauthorised access.</p>
-                            <a href="#" class="industry-link">
+                            <a href="cctv-surveillance-solutions.php" class="industry-link">
                                 LEARN MORE <i class="ri-arrow-right-s-line"></i>
                             </a>
                         </div>
@@ -717,7 +717,7 @@
             <div class="row justify-content-center">
                 <div class="col-12 text-center">
                     <div class="industries-bottom-action">
-                        <a href="#" class="btn btn-theme">
+                        <a href="contact-us.php" class="btn btn-theme">
                             GET IN TOUCH WITH US <i class="ri-arrow-right-s-line"></i>
                         </a>
                     </div>

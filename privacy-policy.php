@@ -14,6 +14,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
  <?php include 'links.php' ?>
+</head>
 
 <body class="homepage-index gd-form trans-page">
 
@@ -27,7 +28,7 @@
         </div>
         <p>
           This Privacy Policy outlines the practices and measures implemented by to safeguard your privacy when you visit our website,
-          <a class="term-privacy" href="index.html"> www.hancockpublishers.com</a> We are deeply committed to protecting your personal information and ensuring the confidentiality of the services we provide. This policy applies only to data collected on our website and addresses the following elements:
+          <a class="term-privacy" href="index.php"> www.hancockpublishers.com</a> We are deeply committed to protecting your personal information and ensuring the confidentiality of the services we provide. This policy applies only to data collected on our website and addresses the following elements:
         </p>
         <h3>Information Collection, Use, and Sharing</h3>
         <p>We at are the sole owners of the data we collect on our site. We only have access to information you provide us with your consent, either via email or by directly contacting us. We will not rent or sell your data to any third party.</p>
@@ -52,10 +53,10 @@
         <h3>Information About Our Services and Products</h3>
         <p>
           We make every effort to provide accurate descriptions of the services and products offered on
-          <a class="term-privacy" href="index.html">www.hancockpublishers.com</a>.
+          <a class="term-privacy" href="index.php">www.hancockpublishers.com</a>.
           However, we cannot guarantee that the product or service descriptions or any other content on our website are accurate, complete, reliable, or up-to-date. If you believe that the product or service you received differs from the descriptions on our website, please promptly contact us via phone
           <a class="term-privacy" href="tel:(949) 239-6045">+(949) 239-6045</a> or email at
-          <a class="term-privacy" href="cdn-cgi/l/email-protection.html#1871767e77587079767b777b73686d7a74716b707d6a6b367b7775"><span class="__cf_email__" data-cfemail="620b0c040d220a030c010d01091217000e0b110a0710114c010d0f">[email&#160;protected]</span></a>.
+          <a class="term-privacy" href="mailto:info@example.com">info@example.com</a>.
         </p>
         <h3>Confidentiality and Ownership</h3>
         <p> operates with complete confidentiality. All content or communications created or reviewed for collaboration purposes will not be divulged to third parties under any circumstances. We claim no rights over the products or services we offer. Any material we write or edit is acknowledged as the exclusive property of the customer. When you utilize our services, only you are recognized as the creator and/or owner of the content.</p>
@@ -63,7 +64,7 @@
         <p>All original content created or written by for clients will be original and free of plagiarism. It will never be copied from another source. Any information derived from external sources will be properly cited to preserve the authenticity of the content.</p>
         <p>If you have any concerns or questions about this privacy policy or believe that is not adhering to it, please contact us immediately via telephone at
           <a class="term-privacy" href="tel:(949) 239-6045">(949) 239-6045</a> or email us at
-          <a class="term-privacy" href="cdn-cgi/l/email-protection.html#6900070f06290108070a060a02191c0b05001a010c1b1a470a0604"><span class="__cf_email__" data-cfemail="8de4e3ebe2cde5ece3eee2eee6fdf8efe1e4fee5e8fffea3eee2e0">[email&#160;protected]</span></a>.
+          <a class="term-privacy" href="mailto:info@example.com">info@example.com</a>.
           We will ensure the absolute protection of your privacy and the confidentiality of your personal information.
         </p>
       </div>
@@ -76,3 +77,6 @@
     <?php include 'footer.php' ?>
     <!-- end -->
 
+</body>
+
+</html>

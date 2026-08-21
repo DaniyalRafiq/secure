@@ -1,5 +1,9 @@
 <?php
-$page = basename($_SERVER['PHP_SELF'], '.php');
+require_once 'services-data.php';
+
+$page          = basename($_SERVER['PHP_SELF'], '.php');
+$isServicePage = array_key_exists($page, $services);
+$servicesHome  = first_service_slug() . '.php';
 ?>
 <!-- <?php include 'top-bar.php' ?> -->
 <header class="header">
@@ -20,66 +24,23 @@ $page = basename($_SERVER['PHP_SELF'], '.php');
                             <a class="nav-link <?php if ($page == 'index') { echo 'active'; } ?>" href="index.php">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link <?php if ($page == 'about') { echo 'active'; } ?>" href="about.php">About Us</a>
+                            <a class="nav-link <?php if ($page == 'about-us') { echo 'active'; } ?>" href="about-us.php">About Us</a>
                         </li>
-                        
+
                         <!-- Custom Services Dropdown -->
                         <li class="nav-item custom-dropdown-wrapper">
-                            <a class="nav-link custom-dropdown-toggle <?php if (in_array($page, ['security-guards', 'executive-protection', 'armed-escort', 'event-security', 'cctv-surveillance', 'electronic-security', 'access-control', 'reception-visitor', 'bulletproof-vehicles', 'consultancy-risk'])) { echo 'active'; } ?>" href="services.php">
+                            <a class="nav-link custom-dropdown-toggle <?php if ($isServicePage) { echo 'active'; } ?>" href="<?php echo $servicesHome; ?>">
                                 Services <i class="ri-arrow-down-s-line dropdown-arrow"></i>
                             </a>
-                            
+
                             <div class="custom-dropdown-menu">
                                 <div class="services-grid">
-                                    <a href="security-guards.php" class="service-item <?php if ($page == 'security-guards') echo 'active'; ?>">
-                                        <div class="service-icon"><i class="ri-shield-user-line"></i></div>
-                                        <span class="service-title">Security Guard Services</span>
+                                    <?php foreach ($services as $navSlug => $navService): ?>
+                                    <a href="<?php echo $navSlug; ?>.php" class="service-item <?php if ($page == $navSlug) echo 'active'; ?>">
+                                        <div class="service-icon"><i class="<?php echo e($navService['icon']); ?>"></i></div>
+                                        <span class="service-title"><?php echo e($navService['name']); ?></span>
                                     </a>
-
-                                    <a href="executive-protection.php" class="service-item <?php if ($page == 'executive-protection') echo 'active'; ?>">
-                                        <div class="service-icon"><i class="ri-user-star-line"></i></div>
-                                        <span class="service-title">Executive Protection Services</span>
-                                    </a>
-
-                                    <a href="armed-escort.php" class="service-item <?php if ($page == 'armed-escort') echo 'active'; ?>">
-                                        <div class="service-icon"><i class="ri-truck-line"></i></div>
-                                        <span class="service-title">Armed Escort and Secure Transportation</span>
-                                    </a>
-
-                                    <a href="event-security.php" class="service-item <?php if ($page == 'event-security') echo 'active'; ?>">
-                                        <div class="service-icon"><i class="ri-calendar-event-line"></i></div>
-                                        <span class="service-title">Event Security Management</span>
-                                    </a>
-
-                                    <a href="cctv-surveillance.php" class="service-item <?php if ($page == 'cctv-surveillance') echo 'active'; ?>">
-                                        <div class="service-icon"><i class="ri-webcam-line"></i></div>
-                                        <span class="service-title">CCTV Surveillance Solutions</span>
-                                    </a>
-
-                                    <a href="electronic-security.php" class="service-item <?php if ($page == 'electronic-security') echo 'active'; ?>">
-                                        <div class="service-icon"><i class="ri-cpu-line"></i></div>
-                                        <span class="service-title">Electronic Security Systems</span>
-                                    </a>
-
-                                    <a href="access-control.php" class="service-item <?php if ($page == 'access-control') echo 'active'; ?>">
-                                        <div class="service-icon"><i class="ri-lock-password-line"></i></div>
-                                        <span class="service-title">Access Control & Screening</span>
-                                    </a>
-
-                                    <a href="reception-visitor.php" class="service-item <?php if ($page == 'reception-visitor') echo 'active'; ?>">
-                                        <div class="service-icon"><i class="ri-building-4-line"></i></div>
-                                        <span class="service-title">Reception & Visitor Management</span>
-                                    </a>
-
-                                    <a href="bulletproof-vehicles.php" class="service-item <?php if ($page == 'bulletproof-vehicles') echo 'active'; ?>">
-                                        <div class="service-icon"><i class="ri-shield-flash-line"></i></div>
-                                        <span class="service-title">Bulletproof Vehicle Services</span>
-                                    </a>
-
-                                    <a href="consultancy-risk.php" class="service-item <?php if ($page == 'consultancy-risk') echo 'active'; ?>">
-                                        <div class="service-icon"><i class="ri-file-shield-line"></i></div>
-                                        <span class="service-title">Consultancy & Risk Assessment</span>
-                                    </a>
+                                    <?php endforeach; ?>
                                 </div>
                             </div>
                         </li>
@@ -88,7 +49,7 @@ $page = basename($_SERVER['PHP_SELF'], '.php');
                             <a class="nav-link <?php if ($page == 'clients') { echo 'active'; } ?>" href="clients.php">Clients</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link <?php if ($page == 'contact') { echo 'active'; } ?>" href="contact.php">Contact Us</a>
+                            <a class="nav-link <?php if ($page == 'contact-us') { echo 'active'; } ?>" href="contact-us.php">Contact Us</a>
                         </li>
                     </ul>
                 </div>
@@ -115,7 +76,7 @@ $page = basename($_SERVER['PHP_SELF'], '.php');
                                     aria-label="Close"></button>
                             </div>
                             <hr>
-                            <form method="POST" action="signup" class="needs-validation" novalidate>
+                            <form method="POST" action="signup.php" class="needs-validation" novalidate>
                                 <div class="row">
                                     <div class="col-xl-12 col-lg-12 col-md-12">
                                         <div class="mb-3">
@@ -146,11 +107,9 @@ $page = basename($_SERVER['PHP_SELF'], '.php');
                                             <select class="form-control form-select model-input" id="mySelect"
                                                 required="" name="service">
                                                 <option selected="" disabled="" value="">Select Service</option>
-                                                <option value="Assignment">Assignment</option>
-                                                <option value="Dissertation">Dissertation</option>
-                                                <option value="Research Paper">Research Paper</option>
-                                                <option value="Thesis">Thesis</option>
-                                                <option value="Online Exam">Online Exam</option>
+                                                <?php foreach ($services as $navSlug => $navService): ?>
+                                                <option value="<?php echo $navSlug; ?>"><?php echo e($navService['name']); ?></option>
+                                                <?php endforeach; ?>
                                             </select>
                                         </div>
                                     </div>

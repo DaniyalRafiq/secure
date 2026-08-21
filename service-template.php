@@ -1,3 +1,22 @@
+<?php
+/**
+ * Shared layout for every service detail page.
+ *
+ * A service page only needs to set $serviceSlug and include this file:
+ *
+ *   <?php
+ *   $serviceSlug = 'security-guard-services';
+ *   include 'service-template.php';
+ *
+ * Structure, components and styling are identical for all 10 services —
+ * only the copy defined in services-data.php changes.
+ */
+
+require_once 'services-data.php';
+
+$slug    = isset($serviceSlug) ? $serviceSlug : basename($_SERVER['PHP_SELF'], '.php');
+$service = isset($services[$slug]) ? $services[$slug] : $services[first_service_slug()];
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,7 +24,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Services 1</title>
+    <title><?php echo e($service['name']); ?></title>
+    <meta name="description" content="<?php echo e($service['banner_text']); ?>" />
     <?php include 'links.php' ?>
     <link rel="stylesheet" href="assets/css/noman.css" />
 </head>
@@ -19,19 +39,18 @@
     <section class="page-banner-section">
         <div class="container">
             <nav class="breadcrumb-nav">
-                <a href="index">Home</a>
-                <span class="separator">></span>
-                <span class="current">Services</span>
+                <a href="index.php">Home</a>
+                <span class="separator">&gt;</span>
+                <span class="current"><?php echo e($service['name']); ?></span>
             </nav>
             <div class="page-banner-content">
-                <h1>TWO DECADES OF <span>PROTECTING</span><br>WHAT MATTERS MOST</h1>
+                <h1><?php echo $service['banner_heading_html']; ?></h1>
                 <p>
-                    From a single patrol officer to one of the UK's most trusted security groups — Murtuza
-                    Security has spent 20 years building expertise that clients rely on, every hour of every day.
+                    <?php echo e($service['banner_text']); ?>
                 </p>
                 <div class="page-banner-btn-group">
-                    <a href="#our-history" class="btn btn-theme">MEET OUR TEAM</a>
-                    <a href="#our-history" class="btn btn-theme white-btn">OUR HISTORY <i
+                    <a href="contact-us.php" class="btn btn-theme">GET A FREE ASSESSMENT</a>
+                    <a href="#service-process" class="btn btn-theme white-btn">HOW IT WORKS <i
                             class="ri-arrow-right-s-line"></i></a>
                 </div>
             </div>
@@ -45,52 +64,28 @@
             <div class="row"> <!-- Content Right Column -->
                 <div class="col-lg-6 col-md-12">
                     <div class="who-we-are-content">
-                        <span class="sub-title">WHO WE ARE</span>
+                        <span class="sub-title"><?php echo e($service['intro_sub']); ?></span>
                         <div class="main-heading">
-                            <h2>MORE THAN SECURITY —<br><span>A TRUSTED PARTNER</span></h2>
+                            <h2><?php echo $service['intro_heading_html']; ?></h2>
                         </div>
                         <p class="description">
-                            Murtuza Security Group was founded in 2004 by industry veteran Murtuza Hassanali
-                            with a single conviction: that professional security should be built on integrity,
-                            training, and genuine care. What began as a small manned guarding operation in
-                            London has grown into one of the UK's most respected security groups.
+                            <?php echo e($service['intro_p1']); ?>
                         </p>
                         <p class="description">
-                            Today we serve over 1,200 sites — from flagship retail and corporate headquarters to
-                            construction sites, residential estates, and live events. Our 850+ officers are hand-picked,
-                            rigorously trained, and treated as professionals, because we believe that culture flows
-                            directly to service quality.
+                            <?php echo e($service['intro_p2']); ?>
                         </p>
 
                         <ul class="feature-list row gy-2">
+                            <?php foreach ($service['features'] as $feature): ?>
                             <li class="col-md-6">
                                 <i class="ri-checkbox-circle-line"></i>
-                                <span>Licensed operatives across all disciplines</span>
+                                <span><?php echo e($feature); ?></span>
                             </li>
-                            <li class="col-md-6">
-                                <i class="ri-checkbox-circle-line"></i>
-                                <span>ISO 9001 quality management certified</span>
-                            </li>
-                            <li class="col-md-6">
-                                <i class="ri-checkbox-circle-line"></i>
-                                <span>24/7 control room with live monitoring</span>
-                            </li>
-                            <li class="col-md-6">
-                                <i class="ri-checkbox-circle-line"></i>
-                                <span>Nationwide coverage, local accountability</span>
-                            </li>
-                            <li class="col-md-6">
-                                <i class="ri-checkbox-circle-line"></i>
-                                <span>Fully vetted to BS 7858 standard</span>
-                            </li>
-                            <li class="col-md-6">
-                                <i class="ri-checkbox-circle-line"></i>
-                                <span>Technology-integrated security solutions</span>
-                            </li>
+                            <?php endforeach; ?>
                         </ul>
 
-                        <a href="#" class="btn btn-theme">
-                            DOWNLOAD COMPANY PROFILE <i class="ri-arrow-right-s-line"></i>
+                        <a href="contact-us.php" class="btn btn-theme">
+                            REQUEST COMPANY PROFILE <i class="ri-arrow-right-s-line"></i>
                         </a>
                     </div>
                 </div>
@@ -98,8 +93,8 @@
                 <div class="col-lg-6 col-md-12">
                     <div class="who-we-are-image-wrapper">
                         <div class="main-image">
-                            <img src="assets/images/about-s-img.png" alt="Murtuza Security Officer On Site"
-                                class="img-fluid">
+                            <img src="<?php echo e($service['image']); ?>"
+                                alt="<?php echo e($service['name']); ?>" class="img-fluid">
                         </div>
                     </div>
                 </div>
@@ -117,107 +112,41 @@
             <div class="row align-items-end">
                 <div class="col-lg-7 col-md-12">
                     <div class="mvv-header m-0">
-                        <span class="sub-title">MISSION, VISION &amp; VALUES</span>
+                        <span class="sub-title"><?php echo e($service['adv_sub']); ?></span>
                         <div class="main-heading white-heading">
-                            <h2>SERVICE <span>ADVANTAGES</span></h2>
+                            <h2><?php echo $service['adv_heading_html']; ?></h2>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-5 col-md-12">
                     <div class="services-header-description">
-                        <p>From static guarding to rapid response, every service is delivered by vetted, trained
-                            professionals with clear protocols.</p>
+                        <p><?php echo e($service['adv_desc']); ?></p>
                     </div>
                 </div>
             </div>
 
             <!-- Services Items Grid Row -->
             <div class="row services-grid-row">
-                <!-- Service Item 1 -->
+                <?php foreach ($service['adv_items'] as $index => $item): ?>
+                <!-- Service Item <?php echo $index + 1; ?> -->
                 <div class="col-lg-4 col-md-6 col-sm-12">
                     <div class="services-item-box">
-                        <span class="services-item-number">01</span>
+                        <span class="services-item-number"><?php echo str_pad($index + 1, 2, '0', STR_PAD_LEFT); ?></span>
                         <div class="services-item-icon">
-                            <i class="ri-shield-line"></i>
+                            <i class="<?php echo e($item['icon']); ?>"></i>
                         </div>
-                        <h3 class="services-item-title">STATIC SECURITY GUARDS</h3>
-                        <p class="services-item-text">Round-the-clock uniformed officers stationed at your premises to
-                            deter unauthorized access, monitor entry points, and enforce site protocols.</p>
+                        <h3 class="services-item-title"><?php echo e($item['title']); ?></h3>
+                        <p class="services-item-text"><?php echo e($item['text']); ?></p>
                     </div>
                 </div>
-
-                <!-- Service Item 2 -->
-                <div class="col-lg-4 col-md-6 col-sm-12">
-                    <div class="services-item-box">
-                        <span class="services-item-number">02</span>
-                        <div class="services-item-icon">
-                            <i class="ri-time-line"></i>
-                        </div>
-                        <h3 class="services-item-title">MOBILE PATROL SERVICES</h3>
-                        <p class="services-item-text">Scheduled and randomized vehicle patrols covering multiple
-                            locations. Visible deterrence with detailed incident logs after every shift.</p>
-                    </div>
-                </div>
-
-                <!-- Service Item 3 -->
-                <div class="col-lg-4 col-md-6 col-sm-12">
-                    <div class="services-item-box">
-                        <span class="services-item-number">03</span>
-                        <div class="services-item-icon">
-                            <i class="ri-tv-line"></i>
-                        </div>
-                        <h3 class="services-item-title">CCTV &amp; REMOTE MONITORING</h3>
-                        <p class="services-item-text">24/7 live surveillance monitoring by trained analysts from our
-                            command center. Immediate escalation protocols for any flagged activity.</p>
-                    </div>
-                </div>
-
-                <!-- Service Item 4 -->
-                <div class="col-lg-4 col-md-6 col-sm-12">
-                    <div class="services-item-box">
-                        <span class="services-item-number">04</span>
-                        <div class="services-item-icon">
-                            <i class="ri-team-line"></i>
-                        </div>
-                        <h3 class="services-item-title">EVENT SECURITY</h3>
-                        <p class="services-item-text">Crowd management, access control, and VIP protection for corporate
-                            events, concerts, exhibitions, and private gatherings of any scale.</p>
-                    </div>
-                </div>
-
-                <!-- Service Item 5 -->
-                <div class="col-lg-4 col-md-6 col-sm-12">
-                    <div class="services-item-box">
-                        <span class="services-item-number">05</span>
-                        <div class="services-item-icon">
-                            <i class="ri-lock-line"></i>
-                        </div>
-                        <h3 class="services-item-title">ARMED SECURITY OFFICERS</h3>
-                        <p class="services-item-text">Licensed, armed personnel for high-risk environments — banks,
-                            cash-in-transit, jewelry stores, and government facilities requiring elevated security.</p>
-                    </div>
-                </div>
-
-                <!-- Service Item 6 -->
-                <div class="col-lg-4 col-md-6 col-sm-12">
-                    <div class="services-item-box">
-                        <span class="services-item-number">06</span>
-                        <div class="services-item-icon">
-                            <i class="ri-home-4-line"></i>
-                        </div>
-                        <h3 class="services-item-title">RESIDENTIAL &amp; HOA SECURITY</h3>
-                        <p class="services-item-text">Community security programs covering gated neighborhoods,
-                            apartment complexes, and residential estates with patrol, gatehouse, and emergency response.
-                        </p>
-                    </div>
-                </div>
+                <?php endforeach; ?>
             </div>
         </div>
     </section>
     <!-- section mission vision values -->
 
 
-    <section class="process-section">
+    <section class="process-section" id="service-process">
         <div class="container">
             <!-- Section Heading Row -->
             <div class="row justify-content-center">
@@ -298,7 +227,7 @@
 
                     <!-- Right Action Button -->
                     <div class="col-lg-3 col-md-4 col-12 text-md-end text-start">
-                        <a href="#" class="btn btn-theme">START NOW</a>
+                        <a href="contact-us.php" class="btn btn-theme">START NOW</a>
                     </div>
                 </div>
             </div>
@@ -523,7 +452,7 @@
                                             <span class="metric-lbl">SITES SECURED</span>
                                         </div>
                                     </div>
-                                    <a href="#" class="case-study-link">
+                                    <a href="clients.php" class="case-study-link">
                                         FULL CASE STUDY <i class="ri-arrow-right-s-line"></i>
                                     </a>
                                 </div>
@@ -586,7 +515,7 @@
                                             <span class="metric-lbl">CLIENT NPS</span>
                                         </div>
                                     </div>
-                                    <a href="#" class="case-study-link">
+                                    <a href="clients.php" class="case-study-link">
                                         FULL CASE STUDY <i class="ri-arrow-right-s-line"></i>
                                     </a>
                                 </div>
@@ -649,7 +578,7 @@
                                             <span class="metric-lbl">CONTINUOUS COVERAGE</span>
                                         </div>
                                     </div>
-                                    <a href="#" class="case-study-link">
+                                    <a href="clients.php" class="case-study-link">
                                         FULL CASE STUDY <i class="ri-arrow-right-s-line"></i>
                                     </a>
                                 </div>

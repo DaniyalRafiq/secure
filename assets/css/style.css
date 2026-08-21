@@ -2529,3 +2529,204 @@ hr {
 .services-grid a {
   display: flex !important;
 }
+
+/* ==========================================
+   COMPARISON TABLE SECTION STYLES
+   ========================================== */
+.sec-table {
+  /* background-color: #0b0f19; */
+  padding: 80px 0;
+}
+
+.comparison-table-wrapper {
+  max-width: 980px;
+  margin: 40px auto 0 auto;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.comparison-table {
+  width: 100%;
+  margin-bottom: 0;
+  border-collapse: collapse;
+  background-color: #121826;
+  color: #ffffff;
+}
+
+/* Header Styling */
+.comparison-table thead tr {
+  background-color: #0e131f;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.comparison-table th {
+  padding: 20px 24px;
+  font-family: var(--Primary-font);
+  font-size: 15px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+.comparison-table .th-feature {
+  color: #a0aab8;
+  width: 50%;
+}
+
+.comparison-table .th-brand {
+  color: var(--secondary);
+  /* Primary Red */
+  width: 25%;
+  background-color: rgba(208, 28, 36, 0.03);
+}
+
+.comparison-table .th-typical {
+  color: #a0aab8;
+  width: 25%;
+}
+
+/* Table Body Rows & Alternating Backgrounds */
+.comparison-table tbody tr {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+  transition: background-color 0.2s ease;
+}
+
+.comparison-table tbody tr:nth-child(odd) {
+  background-color: #121826;
+}
+
+.comparison-table tbody tr:nth-child(even) {
+  background-color: #0e131f;
+}
+
+.comparison-table tbody tr:hover {
+  background-color: #171f30;
+}
+
+.comparison-table td {
+  padding: 18px 24px;
+  vertical-align: middle;
+}
+
+/* Cell Contents */
+.comparison-table .feature-name {
+  font-family: var(--font-400);
+  font-size: 14px;
+  color: #d1d5db;
+}
+
+/* Highlighted Column Background */
+.comparison-table td:nth-child(2) {
+  background-color: rgba(208, 28, 36, 0.03);
+}
+
+/* Status Icons & Text */
+.comparison-table .icon-check {
+  color: var(--secondary);
+  font-size: 20px;
+  display: inline-block;
+}
+
+.comparison-table .icon-cross {
+  color: #3a4454;
+  font-size: 20px;
+  display: inline-block;
+}
+
+.comparison-table .text-varies {
+  font-family: var(--font-400);
+  font-size: 13px;
+  color: #6b7280;
+}
+
+/* ==========================================
+   SECURITY IN ACTION SECTION STYLES
+   ========================================== */
+.security-action-section {
+  /* background-color: #0b0f19; */
+  padding: 90px 0;
+}
+
+.security-action-section .section-top-desc {
+  font-family: var(--font-400);
+  font-size: 13px;
+  color: #8c97a8;
+  line-height: 20px;
+  margin: 0;
+}
+
+/* Base Action Card Styling */
+.action-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0;
+  border-left: 3px solid var(--secondary);
+  /* Red Left Accent Border */
+  width: 100%;
+  cursor: pointer;
+}
+
+/* Card Image & Hover Zoom Effect */
+.action-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1), filter 0.5s ease;
+}
+
+.action-card:hover .action-card-img {
+  transform: scale(1.08);
+  filter: brightness(1.1);
+}
+
+/* Dark Gradient Overlay for Typography Readability */
+.action-card-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  background: linear-gradient(to top, rgba(12, 17, 27, 0.95) 0%, rgba(12, 17, 27, 0.4) 50%, rgba(0, 0, 0, 0) 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 22px;
+  transition: background 0.3s ease;
+}
+
+.action-card:hover .action-card-overlay {
+  background: linear-gradient(to top, rgba(12, 17, 27, 0.98) 0%, rgba(208, 28, 36, 0.25) 60%, rgba(0, 0, 0, 0) 100%);
+}
+
+/* Overlay Typography */
+.action-card-title {
+  font-family: var(--Primary-font);
+  font-size: 20px;
+  color: #ffffff;
+  letter-spacing: 1px;
+  line-height: 1.1;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+}
+
+.action-card-desc {
+  font-family: var(--font-400);
+  font-size: 12px;
+  color: #a0aab8;
+  margin: 0;
+  line-height: 1.3;
+}
+
+/* Aspect Height Classes */
+.action-card-tall {
+  height: 480px;
+}
+
+.action-card-sm {
+  height: 228px;
+}
+
+.action-card-wide {
+  height: 236px;
+}

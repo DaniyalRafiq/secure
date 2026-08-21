@@ -19,7 +19,7 @@
     <section class="page-banner-section">
         <div class="container">
             <nav class="breadcrumb-nav">
-                <a href="index">Home</a>
+                <a href="index.php">Home</a>
                 <span class="separator">&#8226;</span>
                 <span class="current">Contact Us</span>
             </nav>
@@ -90,12 +90,9 @@
                                     <label for="contactService" class="form-label">SERVICE REQUIRED *</label>
                                     <select class="form-select form-control" id="contactService" name="service" required>
                                         <option value="" selected disabled>Select Service Required</option>
-                                        <option value="manned-guarding">Manned Guarding</option>
-                                        <option value="mobile-patrol">Mobile Patrol</option>
-                                        <option value="event-security">Event Security</option>
-                                        <option value="cctv-monitoring">CCTV & Remote Monitoring</option>
-                                        <option value="armed-security">Armed Security</option>
-                                        <option value="residential-security">Residential & HOA Security</option>
+                                        <?php require_once 'services-data.php'; foreach ($services as $optSlug => $optService): ?>
+                                        <option value="<?php echo $optSlug; ?>"><?php echo e($optService['name']); ?></option>
+                                        <?php endforeach; ?>
                                     </select>
                                     <span class="invalid-feedback">Please select a required service.</span>
                                 </div>

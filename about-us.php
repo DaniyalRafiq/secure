@@ -19,7 +19,7 @@
     <section class="page-banner-section">
         <div class="container">
             <nav class="breadcrumb-nav">
-                <a href="index">Home</a>
+                <a href="index.php">Home</a>
                 <span class="separator">&#8226;</span>
                 <span class="current">About Us</span>
             </nav>
@@ -97,7 +97,7 @@
                             </li>
                         </ul>
 
-                        <a href="#" class="btn btn-theme">
+                        <a href="contact-us.php" class="btn btn-theme">
                             DOWNLOAD COMPANY PROFILE <i class="ri-arrow-right-s-line"></i>
                         </a>
                     </div>
@@ -462,7 +462,7 @@
                             </li>
                         </ul>
 
-                        <a href="#" class="btn btn-theme">
+                        <a href="security-guard-services.php#service-process" class="btn btn-theme">
                             SEE OUR APPROACH <i class="ri-arrow-right-s-line"></i>
                         </a>
                     </div>
